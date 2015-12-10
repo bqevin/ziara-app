@@ -1,0 +1,61 @@
+/*Author: Kevin Barasa;
+*Date: 26/04/2015;
+*bkevin001@yhoo.com/ kevin.barasa@dgtolafrica.com
+*Phone: 0724 778 017;
+*/
+
+/*General body resets*/
+body{
+	margin: 0px;
+	padding: 0px;
+	background: ghostwhite; 
+	font-family: verdana,sans-serif; 
+	font-size: 13px;}
+.clearfix{clear: both; margin: 0px; padding: 0px;}
+div{display: block;}
+
+/* PHP Variables Styling*/
+
+#name{
+	padding: 4px; 
+	font-weight: bold; 
+	line-height: 2em;
+	font-size: 16px;
+	color: #2171DA;}
+#status{padding: 5px;}
+
+/* PHP Variables END*/
+
+/*Call Outs*/
+#callout_success{
+		display: block;
+		margin: 20px 0;
+		padding: 15px 30px 15px 15px;
+		border-left: 5px solid #5cb85c;
+		background-color: #c7e6c7;}
+
+#callout_success h2{
+		color: #5cb85c; margin: 0px;}
+
+#callout_info{
+		margin: 20px 0;
+		padding: 15px 30px 15px 15px;
+		border-left: 5px solid #5bc0de;
+  		background-color: #daf1f8;}
+
+#callout_info h2{color: #5bc0de; margin: 0px;}
+
+#callout_warning{margin: 20px 0;
+		padding: 15px 30px 15px 15px;
+		border-left: 5px solid #f0ad4e;
+  		background-color: #fceedb;}
+
+#callout_warning h2{ margin: 0; color: #f0ad4e;}
+
+#callout_danger{margin: 20px 0;
+		padding: 15px 30px 15px 15px;
+		border-left: 5px solid #f15656;
+  		background-color: #fde3e3;}
+
+#callout_danger h2{margin: 0; color: #f15656;}
+/* End Of Call Outs */

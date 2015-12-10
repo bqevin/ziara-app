@@ -1,0 +1,6 @@
+[02-Oct-2015 10:17:31 America/Chicago] PHP Warning:  include(travel_db_connect.php): failed to open stream: No such file or directory in /home3/amn/public_html/www.yourziara.com/view/see_likes.php on line 3
+[02-Oct-2015 10:17:31 America/Chicago] PHP Warning:  include(travel_db_connect.php): failed to open stream: No such file or directory in /home3/amn/public_html/www.yourziara.com/view/see_likes.php on line 3
+[02-Oct-2015 10:17:31 America/Chicago] PHP Warning:  include(): Failed opening 'travel_db_connect.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home3/amn/public_html/www.yourziara.com/view/see_likes.php on line 3
+[02-Oct-2015 10:17:31 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home3/amn/public_html/www.yourziara.com/view/see_likes.php on line 17
+[02-Oct-2015 10:17:31 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home3/amn/public_html/www.yourziara.com/view/see_likes.php on line 25
+[02-Oct-2015 10:17:31 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home3/amn/public_html/www.yourziara.com/view/see_likes.php on line 47

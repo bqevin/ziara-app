@@ -1,0 +1,58 @@
+/*Author: Kevin Barasa;
+*Date: 11/06/2015;
+*bkevin001@yhoo.com/ kevin.barasa@dgtolafrica.com
+*Phone: 0724 778 017;
+*/
+
+#sign-up-box{
+	margin-top: 60px;
+    background-color:#3D3E3F;
+    color: #fff;
+    padding:10px;
+    width: 30%;
+	float: right;
+	margin-right: 70px;
+}
+#sign-up-box h2{
+	font-family: lato;
+	font-size: 38px;
+	font-weight: normal;
+	text-align: center;
+	margin: 0px;
+}
+#sign-up-box h4{
+	font-size: 14px;
+	font-family: lato;
+	//font-weight: bold;
+	text-align: center;
+	margin-top: 0px;
+}
+#sign-up-box form{
+	text-align: center;}
+#sign-up-box select{
+	background: #090909;
+	color: #C5BDBD;
+	border: none;
+	height: 35px;
+	text-align: center;
+	font-family:Roboto; 
+	font-size: 15px;
+	border-radius: 8px;
+	width: 300px;}
+
+option{text-align: left; line-height: 20px;}
+#sign-up-link a{text-align: center !important; }
+
+#sign-up-desc{
+	margin-top: 100px;
+	float: left;
+    width: 50%;
+    margin-left: 60px;
+    color: #fff;
+    font-family: lato;
+    line-height: 2.4em;
+}
+#sign-up-desc p{text-align: center;}
+
+#sign-up-desc h1{text-align:center; font-size: 4.5em; font-weight: normal; margin-bottom: 0px;}
+#sign-up-desc h2{margin-top: 0px; text-align:center; font-weight: normal;}
