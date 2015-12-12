@@ -1,0 +1,74 @@
+<?php
+session_start();
+include('travel_db_connect.php')
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ziara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<style>
+p:hover{background-color:#00FF00;}
+#submit{background-color:#33FF99;color:white;border-radius:5px;width:100px;height:40px;}
+#submit:hover{background-color:white;}
+#link{color:#6699FF;font-size:20px;text-decoration:none;font-weight:normal;}
+#span{font-size:20px;color:#00FF66;}
+</style>
+<body style="background-image:url(safari.jpg);background-repeat:no-repeat;background-size: cover;">
+<table width="100%"style="height:40px;background-color:#99CC00;">
+<tr>
+<td width="10%">
+<span style="color:white;text-shadow:4px 4px 8px green;font-size:25px;font-weight:bold;"><i>Ziara.</i></span></td>
+<td width="35%">
+<form method="post"action="search_action.php">
+<input type="text"name="email"placeholder="search by email"style="width:250px;height:40px;border-radius:5px;border-color:black;">
+<input type="submit"id="submit"value="search"></form></td>
+<td width="10%">
+<span><a href="country.php"style='color:white;font-size:20px;text-decoration:none;font-weight:bold;'><img src="home.png" style="width:20px;height:20px;">Home</a></span>
+</td>
+<td width="5%"></td>
+<td width="10%">
+<span><a href="scroll_friends.php"style='color:white;font-size:20px;text-decoration:none;font-weight:bold;'><img src="friends.png" style="width:20px;height:20px;">Friends</a></span>
+</td>
+<td width="5%"></td>
+<td width="10%">
+<span><a href="my_campaigns.php"style='color:white;font-size:20px;text-decoration:none;font-weight:bold;'><img src="microphone.png" style="width:20px;height:20px;">Campaigns</a></span>
+</td>
+<td width="5%"></td>
+<td width="10%">
+<span><a href="my_events.php"style='color:white;font-size:20px;text-decoration:none;font-weight:bold;'><img src="calendar.png" style="width:20px;height:20px;">Events</a></span>
+</td></tr></table>
+<table width="100%">
+<tr>
+<td width="25%"></td>
+<td width="50%"style="background-color:#FFFFCC;border-radius:5px;">
+<?php
+if(isset($_GET['msg']))
+{
+  $message = $_GET['msg'];
+  if($message==1)
+  {
+    echo"<span style='color:red;'>Comment cannot be empty</span>";
+  }
+}
+$comment_id = $_GET['comment_id'];
+$get_comment = "SELECT * FROM comments WHERE id='$comment_id'";
+$results = mysql_query($get_comment,$link);
+if(!$results)
+{
+  die('Error on 48:'.mysql_error());
+}
+while($row = mysql_fetch_array($results,MYSQL_ASSOC))
+{
+  $comment = $row['comment'];
+  $status_owner = $row['status_owner'];
+  $status_id = $row['status_id'];
+  $comment_id =$row['id'];
+  echo"<form method='post'action='edit_comment_action.php'>
+  <span id='span'><br><textarea rows='5'cols='40'style='border-color:black;border-radius:5px;'name='comment'>$comment</textarea></span><br>
+  <input type='hidden'name='status_id'value='$status_id'>
+  <input type='hidden'name='status_owner' value='$status_owner'>
+  <input type='hidden'name='comment_id' value='$comment_id'>
+  <input type='submit'value='post'id='submit'></form>";
+}
+?></td><td width="25%"></td></tr></table></body></html>

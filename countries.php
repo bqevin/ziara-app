@@ -1,24 +1,13 @@
 <?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<head><title>Welcome to Ziara :: Home</title>
-	<!--Meta Links-->
-	<meta name="author" content="Ziara" /> 
-	<meta name="distribution" content="global" />
-	<meta name="robots" content="follow, all" />
-	<meta property="og:title" content="Ziara " />
-	<meta property="og:url" content="http://www.pinpointsafari.com/" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="We help you discover places you have never before through people who have visited those places or people who live there via photo-sharing and writing" />
-	<meta name="keywords" content="Open Access, Investing, virtual travel, connecting the world,we are one" />
-	<meta name="application-name" content="Ziara Web App " />
+<title> Ziara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <style>
-#pic{border-radius:200px;200px;200px;200px;width:400px;;height:400px;}
-p{font-size:20px;color:#666600;}
-p:hover{color:green;}
-#submit{background-color:#33FF99;color:white;border-radius:5px;width:400px;height:40px;}
+#submit{background-color:#33FF99;color:white;border-radius:5px;width:100px;height:40px;}
 #submit:hover{background-color:white;}
 </style>
 </head>
@@ -26,44 +15,10 @@ p:hover{color:green;}
 <table width="100%">
 <tr>
 <td width="25%"></td>
-
 <td width="50%" style="background-color:#FFFFCC;border-radius:5px;opacity:0.9;">
-<h1 style="color:#CC0000;color:#66CCFF;text-shadow:4px 4px 8px green;"><i>Ziara.</i></h1>
-<p>Ziara is a social web app(travel social network) that helps you discover places you have never been before through people who have visited those places or people 
-who live there via photo-sharing and writing.When you visit a country virtually you will establish an online prescence that will help you:make friends in that country and keep in touch via personal messaging,launch events,launch
-campaigns to adress any issue of choice,get to see the many service providers you can keep contact with once you decide to physically visit that country plus many more.</p>
-<form method="post"action="index_action.php">
-<h2 style="font-size:20px;">Sign Up </h2>
-<?php
-if(isset($_GET['msg']))
-{
-  $message = $_GET['msg'];
-  if($message == 1)
-   {
-      echo"<p style='width:300px;height:35px;color:red;background-color:pink;text-align:center;border-radius:5px;'>Please fill in all the fields.</p>";
-   }
-   if($message == 2)
-   {
-      echo"<p style='width:300px;height:35px;color:red;background-color:pink;text-align:center;border-radius:5px;'>The email you entered already exists.</p>";
-   }
-    if($message == 3)
-   {
-      echo"<p style='width:300px;height:35px;color:red;background-color:pink;text-align:center;border-radius:5px;'>Invalid Email Format</p>";
-   }
-}
-?>   
-<span style="font-size:20px;color:#00FF66;">First Name:</span><br>
-<input type="text"name="fname"placeholder="First Name"style="width:400px;height:40px;border-radius:5px;border-color:black;"><br>
-<span style="font-size:20px;color:#00FF66;">Last Name:</span><br>
-<input type="text"name="lname"placeholder="Last Name"style="width:400px;height:40px;border-radius:5px;border-color:black;"><br>
-<span style="font-size:20px;color:#00FF66;">Email:</span><br>
-<input type="text"name="email"placeholder="Email"style="width:400px;height:40px;border-radius:5px;border-color:black;"><br>
-<span style="font-size:20px;color:#00FF66;">Phone Number:</span><br>
-<input type="text"name="pnumber"placeholder="Phone Number"style="width:400px;height:40px;border-radius:5px;border-color:black;"><br>
-<span style="font-size:20px;color:#00FF66;">Password:</span><br>
-<input type="password"name="password"placeholder="Password"style="width:400px;height:40px;border-radius:5px;border-color:black;"><br>
-<span style="font-size:20px;color:#00FF66;">Country:</span><br>
-<select name="country"style="width:400px;height:40px;border-radius:5px;border-color:black;">
+<h1 style="font-size:20px;">Choose A Country</h1>
+<form method="post"action="countries_action.php">
+<select name="country"style="border-radius:5px;width:400px;height:40px;">
 <option value="Afghanistan"name="Afghanistan">Afghanistan</option>
 <option value="Albania"name="Albania">Albania</option>
 <option value="Algeria"name="Algeria">Algeria</option>
@@ -252,19 +207,6 @@ if(isset($_GET['msg']))
 <option value="Yemen"name="Yemen">Yemen</option>
 <option value="Zambia"name="Zambia">Zambia</option>
 <option value="Zimbabwe"name="Zimbabwe">Zimbabwe</option>
-</select><br>
-<span style="font-size:20px;color:#00FF66;">Gender:</span><br>
-<input type="radio"value="Female"name="gender">Female  <input type="radio"value="Male"name="gender">Male<br>
-<input type="hidden"name="job"value="null">
-<input type="hidden"name="skills"value="null">
-<input type="hidden"name="religion"value="null">
-<input type="hidden"name="relationship"value="null">
-<input type="hidden"name="kids"value="null">
-<input type="hidden"name="hobbies"value="null">
-<input type="hidden"name="places"value="null">
-<input type="hidden"name="about"value="null">
-<input type="submit"value="Sign Up" id="submit">
-</form>
-<span><a href="direct_login.php"style="font-size:20px;color:lime;text-decoration:none;">Already have an account?</a></span>
-&nbsp &nbsp &nbsp <span><a href="#"style="font-size:20px;color:lime;text-decoration:none;">Forgot Password?</a></span>
+</select>
+<input type="submit"name="sumit"value="Visit" id="submit"></form></td></form>
 </td><td width="25%"></td></tr></table></body></html>
